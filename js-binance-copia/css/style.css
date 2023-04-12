@@ -1,0 +1,485 @@
+/* List */
+
+#alarms-btc-section {
+  grid-area: btc;
+}
+
+#main {
+  grid-area: main;
+}
+
+#alarms-eth-section {
+  grid-area: eth;
+}
+
+body {
+  
+  background-color: rgb(113, 118, 123);
+  min-width: 568px;
+  
+  height: 100vh;
+  
+  display: grid !important;
+
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 100%;
+
+  grid-template-areas:
+    "btc main eth";
+}
+
+#alarms-btc-section {
+  background-color: rgb(113, 118, 123);
+  width: 100%;
+}
+
+#alarms-btc-list {
+  background-color: rgb(38, 39, 48);
+  border: solid 3px orange;
+  border-radius: 20px;
+  height: 95vh;
+  padding: 30px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 30px;
+  list-style: none;
+}
+
+#alarms-btc-list li {
+  color: white;
+  background-color: rgb(113, 118, 123);
+  min-height: 65px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  align-content: center;
+}
+
+#alarms-eth-section {
+  background-color: rgb(113, 118, 123);
+  width: 100%;
+}
+
+#alarms-eth-list {
+  background-color: rgb(38, 39, 48);
+  border: 3px solid rgb(81, 51, 250);
+  border-radius: 20px;
+  height: 95vh;
+  padding: 30px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 30px;
+  list-style: none;
+}
+
+#alarms-eth-list li {
+  color: white;
+  background-color: rgb(113, 118, 123);
+  border-radius: 10px;
+  min-height: 65px;
+  margin-bottom: 35px;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  align-content: center;
+}
+
+/* Main, header */
+
+#main {
+  background-color: rgb(38, 39, 48);
+  width: 100%;
+}
+
+#header {
+  background-color: rgb(38, 39, 48);
+  height: 120px;
+  margin-top: 25px;
+  align-items: center;
+}
+
+#btc-price-div {
+  color: orange;
+  background-color: rgb(113, 118, 123);
+  width: 33%;
+  height: 100px;
+  border-radius: 15px;
+  align-self: center;
+  align-items: center;
+}
+
+#btc-icon {
+  width: 35px;
+  height: 35px;
+  align-self: center;
+  margin-left: 10%;
+}
+
+#btc-price {
+  font-size: 35px;
+}
+
+#btc-volume {
+  font-size: 17px;
+}
+
+.h-vol {
+  color: rgb(197, 187, 187);
+  font-size: 13px;
+}
+
+#hour-div {
+  color: white;
+  background-color: rgb(38, 39, 48);
+  width: 25%;
+  height: 70px;
+  font-size: 40px;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+
+#eth-price-div {
+  background-color: rgb(113, 118, 123);
+  color: rgb(81, 51, 250);
+  border-radius: 15px;
+  width: 33%;
+  height: 100px;
+  align-self: center;
+  align-items: center;
+}
+
+#eth-icon {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  margin-right: 10%;
+}
+
+#eth-price {
+  font-size: 35px;
+  margin-left: 15%;
+}
+
+#eth-volume {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  font-size: 17px;
+  margin-left: 15%;
+}
+
+/* inputs */
+
+#form-section {
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-group-2 {
+  background-color: rgb(113, 118, 123);
+  height: 80px;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.form-check-input {
+  background-color: rgb(69, 73, 77) !important;
+  font-size: 20px;
+}
+
+.form-check-label {
+  color: rgba(241, 241, 241, 0.719);
+  font-size: 20px;
+}
+
+.input-price {
+  background-color: white !important;
+  border-radius: 14px !important;
+  width: 35% !important;
+  height: 60px !important;
+  font-size: 23px !important;
+  margin-top: 30px;
+  padding-left: 3% !important;
+}
+
+.input-price::placeholder {
+  font-size: 20px;
+  padding-left: 0% !important;
+}
+
+#alert-desc {
+  height: 60px;
+  width: 50%;
+  padding-left: 3% !important;
+  font-size: 20px !important;
+  border-radius: 14px !important;
+  margin: 0 auto;
+}
+
+#alert-desc::placeholder {
+  font-size: 20px;
+  padding-left: 1% !important;
+}
+
+#buttons-div {
+  margin-top: 20px;
+  height: 100px;
+  align-items: center;
+}
+
+#buttons-div button {
+  height: 50px;
+  font-size: 20px;
+  padding: 8px 25px;
+}
+
+#reset-alert-volume {
+  font-size: 20px !important;
+}
+
+#input-alert-simple {
+  display: none;
+}
+
+#input-volume-alert {
+  display: none;
+}
+
+/* li-style */
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.rojo {
+  color: red !important;
+}
+
+.Superior {
+  border: 3px solid green;
+  color: rgb(199, 199, 199);
+}
+
+.Inferior {
+  border: solid 3px rgb(189, 98, 70);
+  color: rgb(199, 199, 199);
+}
+
+.Volumen {
+  border: solid 3px blue;
+  color: rgb(199, 199, 199);
+}
+
+.type {
+  font-size: 14px;
+}
+
+.desc-li {
+  font-style: italic;
+  color: rgb(199, 199, 199);
+}
+
+#reset-alert-volume {
+  display: none;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.label-switch {
+  color: rgba(255, 255, 255, 0.658);
+  background-color: rgb(113, 118, 123);
+  font-size: 20px;
+  border-radius: 7px;
+  padding: 12px 25px;
+}
+
+.switch {
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  left: 4px;
+  bottom: -7px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: rgb(157, 167, 157);
+  position: absolute;
+  top: 0;
+  left: -2px;
+  right: 0;
+  bottom: 4px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.slider:before {
+  background-color: white;
+  height: 13px;
+  width: 13px;
+  left: 3px;
+  bottom: 1px;
+  position: absolute;
+  content: "";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #0d6efd;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+
+.off {
+  display: none;
+}
+
+.on,
+.off {
+  color: rgb(98, 105, 98);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 10px;
+  left: 50px;
+  font-size: 14px;
+}
+
+.off {
+  color: rgb(34, 148, 40);
+}
+
+input:checked+.slider .off {
+  display: block;
+}
+
+input:checked+.slider .on {
+  display: none;
+}
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggleoff {
+  background-color: red;
+}
+
+.toggleon {
+  background-color: green;
+}
+
+.toggledisabled {
+  background: #D3D3D3 !important;
+}
+
+.btn-remove {
+  background-color: rgb(69, 73, 77) !important;
+  border-color: rgb(113, 118, 123) !important;
+  height: 40px;
+  margin-left: 10px;
+  float: right;
+  align-self: center;
+  transition: 500ms !important;
+}
+
+.btn-remove:hover {
+  background-color: red !important;
+}
+
+/* logs */
+
+#logs-div {
+  color: green;
+  background-color: black;
+  width: 95%;
+  padding-top: 5px;
+  margin: 0 auto;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+#logs-content::-webkit-scrollbar {
+  background-color: #333;
+  width: 0.5em;
+  border-radius: 7px;
+}
+
+#logs-content::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 10px;
+}
+
+#logs-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.date-log {
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+}
+
+#logs-content {
+  list-style-type: none;
+  height: 165px;
+  overflow-y: scroll;
+}
+
+.log-error {
+  color: rgb(156, 1, 1);
+}
+
+.log-match {
+  color: rgb(182, 182, 2);
+}
+
+.log-deleted {
+  color: rgb(131, 130, 130);
+}
+
+.log-added {
+  color: rgb(3, 168, 168);
+}
+
+
+

@@ -1,0 +1,59 @@
+@media (max-width: 1400px) {
+
+    #alarms-btc-section {
+      grid-area: btc;
+    }
+  
+    #alarms-btc-list {
+      margin-bottom: 40px;
+      overflow-y: scroll;
+      height: 430px;
+    }
+  
+    #alarms-eth-list {
+      margin-top: 1px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 430px
+    }
+  
+    #alarms-btc-list::-webkit-scrollbar {
+      display: none;
+    }
+  
+    #alarms-eth-list::-webkit-scrollbar {
+      display: none;
+    }
+  
+    #main {
+      grid-area: main;
+    }
+  
+    #alarms-eth-section {
+      grid-area: eth;
+      height: 100%;
+    }
+  
+    #buttons-div {
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      margin-bottom: 20px;
+    }
+  
+    #buttons-div button {
+      margin-bottom: 10px;
+    }
+  
+    body {
+      display: grid !important;
+  
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+  
+      grid-template-areas:
+        "main btc"
+        "main eth";
+    }
+  }

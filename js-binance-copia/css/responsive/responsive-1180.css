@@ -1,0 +1,68 @@
+@media (max-width: 1180px) {
+    #hour-div {
+      font-size: 22px;
+      width: 20%;
+    }
+  
+    #btc-price-div {
+      width: 40%;
+    }
+  
+    #eth-price-div {
+      width: 40%;
+    }
+  
+    .form-group-2 {
+      margin-top: 18px;
+      height: 55px;
+    }
+  
+    .form-check-input {
+      font-size: 14px;
+    }
+  
+    .form-check-label {
+      font-size: 15px;
+    }
+  
+    .input-price {
+      margin-top: 20px !important;
+      height: 50px !important;
+      font-size: 16px !important;
+    }
+  
+    .input-price::placeholder {
+      font-size: 16px;
+    }
+  
+    #alert-desc {
+      font-size: 16px !important;
+      height: 50px;
+    }
+  
+    #alert-desc::placeholder {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 1001px) {
+    #hour-div {
+      display: none;
+    }
+  
+    #btc-price-div {
+      width: 49%;
+    }
+  
+    #eth-price-div {
+      width: 49%;
+    }
+  
+    #logs-div {
+      margin-right: 30px !important;
+    }
+  
+    #logs-content li {
+      margin-right: 5%;
+    }
+  }

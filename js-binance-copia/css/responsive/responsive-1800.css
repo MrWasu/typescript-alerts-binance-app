@@ -1,0 +1,134 @@
+@media (max-width: 1800px) {
+
+    #btc-price-div {
+      height: 80px;
+    }
+  
+    #eth-price-div {
+      height: 80px;
+    }
+  
+  
+    #btc-price {
+      font-size: 28px;
+    }
+  
+    #eth-price {
+      font-size: 28px;
+    }
+  
+    #hour-div {
+      font-size: 34px;
+    }
+  
+    #btc-volume {
+      font-size: 13px;
+    }
+  
+    #eth-volume {
+      font-size: 13px;
+      margin-left: 15%;
+    }
+  
+    .form-group-2 {
+      margin-top: 20px;
+      height: 60px;
+    }
+  
+    .form-check-input {
+      font-size: 18px;
+    }
+  
+    .form-check-label {
+      font-size: 18px;
+    }
+  
+    .input-price {
+      margin-top: 20px !important;
+      height: 50px !important;
+      font-size: 20px !important;
+    }
+  
+    .input-price::placeholder {
+      font-size: 18px;
+    }
+  
+    #alert-desc {
+      font-size: 18px !important;
+      height: 50px;
+    }
+  
+    #alert-desc::placeholder {
+      font-size: 18px;
+    }
+  
+    #buttons-div {
+      margin-top: 20px;
+      height: 100px;
+      align-items: center;
+    }
+  
+    #buttons-div button {
+      height: 40px;
+      font-size: 18px;
+      padding: 8px 22px;
+    }
+  
+    #reset-alert-volume {
+      font-size: 18px !important;
+    }
+  
+    .label-switch {
+      padding: 6px 20px;
+      font-size: 18px;
+    }
+  
+    #alarms-btc-list li {
+      margin-bottom: 25px;
+      min-height: 55px;
+      font-size: 18px;
+    }
+  
+    #alarms-eth-list li {
+      margin-bottom: 25px;
+      min-height: 55px;
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 1600px) {
+  
+    #btc-icon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    #eth-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  
+  
+  @media (max-width: 1460px) {
+    #btc-price {
+      font-size: 26px;
+    }
+  
+    #eth-price {
+      font-size: 26px;
+    }
+  
+    #hour-div {
+      font-size: 30px;
+    }
+  
+    #btc-volume {
+      font-size: 12px;
+    }
+  
+    #eth-volume {
+      font-size: 12px;
+      margin-left: 15%;
+    }
+  }

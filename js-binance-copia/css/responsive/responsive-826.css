@@ -1,0 +1,69 @@
+@media (max-width: 826px) {
+
+    body {
+      display: grid !important;
+  
+      height: 1750px;
+  
+      grid-template-columns: 100%;
+      grid-template-rows: 25% 25% 25% 25%;
+  
+      grid-template-areas:
+        "main"
+        "main"
+        "btc"
+        "eth";
+    }
+  
+    #hour-div {
+      display: flex;
+      font-size: 30px;
+    }
+  
+    #btc-price-div {
+      width: 33%;
+    }
+  
+    #eth-price-div {
+      width: 33%;
+    }
+  
+    .form-group-2 {
+      margin-top: 18px;
+      height: 55px;
+    }
+  
+    .form-check-input {
+      font-size: 17px;
+    }
+  
+    .form-check-label {
+      font-size: 17px;
+    }
+  
+    .input-price {
+      margin-top: 20px !important;
+      height: 50px !important;
+      font-size: 18px !important;
+    }
+  
+    .input-price::placeholder {
+      font-size: 18px;
+    }
+  
+    #alert-desc {
+      font-size: 18px !important;
+    }
+  
+    #alert-desc::placeholder {
+      font-size: 18px;
+    }
+  
+    #reset-log {
+      float: right;
+      position: relative;
+      top: -185px;
+      right: 4%;
+      font-size: 12px;
+    }
+  }
