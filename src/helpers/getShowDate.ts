@@ -1,4 +1,4 @@
-function showDate() {
+export function showDate() {
     actualTime = new Date();
     
     const twoDigitsHour = (hour) => {

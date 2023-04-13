@@ -1,4 +1,4 @@
-function modifiedAlertCamps() {
+export function modifiedAlertCamps() {
     // Se modifican los inputs y los valores según la eleccion en los radios
 
     document.getElementById("input-alert-simple").addEventListener("focus", function () {

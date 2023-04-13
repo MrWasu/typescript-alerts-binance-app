@@ -1,4 +1,4 @@
-function showAlertOnConsole() {
+export function showAlertOnConsole() {
     console.log('-------------------------------------------------------');
     console.log('BTC price: ' + btcPrice);
     console.log('arreglo btc altas:' + arrBtcHigherAlerts);

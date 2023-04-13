@@ -1,4 +1,4 @@
-function addDecimal(num, dec) {
+export function addDecimal(num, dec) {
     // Añade un decimal 
 
     if (!num.toString().includes(".") && dec == 1) {

@@ -1,4 +1,4 @@
-async function getPriceAndVolume() {
+export async function getPriceAndVolume() {
 
     // APIs de binance, se configuran editando la url
     const urlBtcPrice = 'https://fapi.binance.com/fapi/v1/ticker/24hr?symbol=BTCUSDT';

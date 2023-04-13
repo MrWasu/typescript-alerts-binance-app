@@ -30,3 +30,31 @@ const logIdDontRepeat = [];
 let logContent = [];
 let hourSimple;
 let dateSimple;
+
+export {
+    btcPrice,
+    EthPrice,
+    btcVolume,
+    ethVolume,
+    cryptoRadioChoice,
+    alertTypeChoice,
+    mute,
+    alarmDemo1,
+    alarmDemo2,
+    alarmDemo3,
+    alarmDemo4,
+    alarmDemo5,
+    alarmDemo6,
+    alarmDemo7,
+    arrBtcHigherAlerts,
+    arrBtcLowerAlerts,
+    arrBtcVolumeAlerts,
+    arrEthHigherAlerts,
+    arrEthLowerAlerts,
+    arrEthVolumeAlerts,
+    counterForStorage,
+    logIdDontRepeat,
+    logContent,
+    hourSimple,
+    dateSimple
+  };

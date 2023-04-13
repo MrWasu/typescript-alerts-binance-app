@@ -1,4 +1,4 @@
-function saveLocalStorage() { 
+export function saveLocalStorage() { 
 
     // Se encarga de almacenar en el local storage todos los arreglos que contienen las alertas
 

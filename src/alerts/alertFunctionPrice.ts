@@ -1,4 +1,4 @@
-function alertFunctionPrice() {
+export function alertFunctionPrice() {
     // Se revisan las alarmas comparandolas con el precio actual, si hay alarma, se le cambia la propiedad status a la alarma y se manda a imprimir en el log
 
     for (let element of arrBtcHigherAlerts) {

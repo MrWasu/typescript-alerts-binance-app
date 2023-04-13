@@ -1,6 +1,10 @@
 // hay un error que hacer que se siga almacenando el contador de alert counter con su valor aunque no haya alarmas, habria que hacer que si los arreglos estan vacios, mande 0 como counterforStorage
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
+
+ 
     showDate(); // manda crear la hora y mostrarla
     getPriceAndVolume(); // recoge los datos desde binance
     modifiedAlertCamps(); // configura los inputs según las opciones a elegir

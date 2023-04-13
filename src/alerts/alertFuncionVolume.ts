@@ -1,4 +1,4 @@
-function alertFunctionVolume() {
+export function alertFunctionVolume() {
     // Se revisan las alarmas comparandolas con el volumen actual, si hay alarma, se le cambia la propiedad status a la alarma y se manda a imprimir en el log
 
     for (let element of arrBtcVolumeAlerts) {
@@ -16,6 +16,8 @@ function alertFunctionVolume() {
             logs('alert-match', element, 'volumen');
         }
     }
+
+    
 
     soundAlert();
 }

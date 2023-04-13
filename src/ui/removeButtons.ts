@@ -1,4 +1,4 @@
-function removeButtons() {
+export function removeButtons() {
     // Botones de borrar para cada alarma 
 
     const buttons = document.querySelectorAll("button.btn-remove");

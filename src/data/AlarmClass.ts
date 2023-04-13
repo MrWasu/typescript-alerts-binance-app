@@ -1,4 +1,4 @@
-class Alert {
+export class Alert {
     
     static counter = counterForStorage;
     

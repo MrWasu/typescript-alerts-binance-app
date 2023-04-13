@@ -1,4 +1,4 @@
-function showAlertsLi() {
+export function showAlertsLi() {
     // Muestra todas alertas en los paneles junto con el boton de borrar
 
     let btcAlertsLi = '';

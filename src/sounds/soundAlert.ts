@@ -1,4 +1,4 @@
-function soundAlert() {
+export function soundAlert() {
     // Se revisan los status de cada alarma y si es true se manda a reproducir el sonido
 
     for (let element of arrBtcHigherAlerts) {

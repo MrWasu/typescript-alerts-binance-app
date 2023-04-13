@@ -1,4 +1,4 @@
-function volumeAlertBtnReset() {
+export function volumeAlertBtnReset() {
     // Muestra el botón y pone status en falso para todas las alarmas de volumen (volverán a sonar después de un minuto)
 
     document.getElementById('reset-alert-volume').style.display = 'block';
