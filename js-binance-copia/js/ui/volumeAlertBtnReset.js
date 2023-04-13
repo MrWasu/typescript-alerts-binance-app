@@ -1,15 +1,15 @@
 function volumeAlertBtnReset() {
-    // Muestra el boton y pone status false a todas las alarmas de volumen (al minuto volveran a sonar)
+    // Muestra el botón y pone status en falso para todas las alarmas de volumen (volverán a sonar después de un minuto)
 
-    $('#reset-alert-volume').css('display', 'block');
+    document.getElementById('reset-alert-volume').style.display = 'block';
 
-    $('#reset-alert-volume').on("click", function () {
+    document.getElementById('reset-alert-volume').addEventListener('click', function () {
         for (let element of arrBtcVolumeAlerts) {
             element.status = false;
         }
         for (let element of arrEthVolumeAlerts) {
             element.status = false;
         }
-        $('#reset-alert-volume').css('display', 'none');
+        document.getElementById('reset-alert-volume').style.display = 'none';
     });
 }

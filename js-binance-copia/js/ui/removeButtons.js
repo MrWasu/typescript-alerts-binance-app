@@ -1,7 +1,9 @@
 function removeButtons() {
     // Botones de borrar para cada alarma 
 
-    $('button').filter('.btn-remove').on("click", function () {
+    const buttons = document.querySelectorAll("button.btn-remove");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
 
         let pos = -1
         for (let element of arrBtcHigherAlerts) {
@@ -67,4 +69,4 @@ function removeButtons() {
     });
 
     saveLocalStorage();
-}
+    }}

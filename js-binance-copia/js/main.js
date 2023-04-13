@@ -1,6 +1,6 @@
 // hay un error que hacer que se siga almacenando el contador de alert counter con su valor aunque no haya alarmas, habria que hacer que si los arreglos estan vacios, mande 0 como counterforStorage
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     showDate(); // manda crear la hora y mostrarla
     getPriceAndVolume(); // recoge los datos desde binance
     modifiedAlertCamps(); // configura los inputs según las opciones a elegir
@@ -25,11 +25,14 @@ $(document).ready(function () {
         }
     }, 1000)
 
-    $("#add-alert-btn").on("click", function () { // funcionamiento del botón añadir alerta
+    document.getElementById('add-alert-btn').addEventListener('click', function () {
+        // funcionamiento del botón añadir alerta
         setAlertsForArrays(cryptoRadioChoice, alertTypeChoice);
     });
-
-    $("#togBtn").on("change", function () { // boton silenciar
-        mute = $(this).prop("checked"); 
+    
+    document.getElementById('togBtn').addEventListener('change', function () {
+        // boton silenciar
+        mute = this.checked;
     });
+    
 });

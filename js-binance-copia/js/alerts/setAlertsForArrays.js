@@ -1,11 +1,12 @@
 function setAlertsForArrays(cryptoChoice, alertType) {
     // Se almacenan las alarmas en los arreglos.
 
-    const inputAlertSimple = parseFloat($('#input-alert-simple').val());
-    const inputAlertOne = parseFloat($('#input-alert-1').val());
-    const inputAlertTwo = parseFloat($('#input-alert-2').val());
-    const inputAlertVolume = parseInt($('#input-volume-alert').val());
-    const inputDesc = $('#alert-desc').val();
+    const inputAlertSimple = parseFloat(document.getElementById('input-alert-simple').value);
+    const inputAlertOne = parseFloat(document.getElementById('input-alert-1').value);
+    const inputAlertTwo = parseFloat(document.getElementById('input-alert-2').value);
+    const inputAlertVolume = parseInt(document.getElementById('input-volume-alert').value);
+    const inputDesc = document.getElementById('alert-desc').value;
+
 
     // Si el valor del input es superior se añade al arreglo de alarmas por encima del precio, si es inferior al arreglo de alarmas inferiores, 
     // y si es de volumen, al arreglo de alertas de volumen.

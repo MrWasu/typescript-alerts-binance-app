@@ -1,53 +1,53 @@
 function modifiedAlertCamps() {
     // Se modifican los inputs y los valores según la eleccion en los radios
 
-    $("#input-alert-simple, #input-alert-1, #input-alert-2").focus(function () {
-        $(this).val(btcPrice);
+    document.getElementById("input-alert-simple").addEventListener("focus", function () {
+        this.value = btcPrice;
     });
 
-    $("#btc-radio").change(function () {
+    document.getElementById("btc-radio").addEventListener("change", function () {
         cryptoRadioChoice = this.value;
 
-        $("#input-alert-simple, #input-alert-1, #input-alert-2").focus(function () {
-            $(this).val(btcPrice);
+        document.getElementById("input-alert-simple").addEventListener("focus", function () {
+            this.value = btcPrice;
         });
     });
 
-    $("#eth-radio").change(function () {
+    document.getElementById("eth-radio").addEventListener("change", function () {
         cryptoRadioChoice = this.value;
 
-        $("#input-alert-simple, #input-alert-1, #input-alert-2").focus(function () {
-            $(this).val(ethPrice);
+        document.getElementById("input-alert-simple").addEventListener("focus", function () {
+            this.value = ethPrice;
         });
     });
 
-    $("#radio-simple").change(function () {
-        $('#input-alert-simple').css('display', 'block');
-        $('#input-alert-1').css('display', 'none');
-        $('#input-alert-2').css('display', 'none');
-        $('#input-volume-alert').css('display', 'none');
-        $("#formu input[name='input-alert-price']").val("");
-        $('#alert-desc').val("");
-        alertTypeChoice = 'simple';
+    document.getElementById("radio-simple").addEventListener("change", function () {
+        document.getElementById("input-alert-simple").style.display = "block";
+        document.getElementById("input-alert-1").style.display = "none";
+        document.getElementById("input-alert-2").style.display = "none";
+        document.getElementById("input-volume-alert").style.display = "none";
+        document.querySelector("input[name='input-alert-price']").value = "";
+        document.getElementById("alert-desc").value = "";
+        alertTypeChoice = "simple";
     });
 
-    $("#radio-doble").change(function () {
-        $('#input-alert-simple').css('display', 'none');
-        $('#input-alert-1').css('display', 'block');
-        $('#input-alert-2').css('display', 'block');
-        $('#input-volume-alert').css('display', 'none');
-        $("#formu input[name='input-alert-price']").val("");
-        $('#alert-desc').val("");
-        alertTypeChoice = 'double';
+    document.getElementById("radio-doble").addEventListener("change", function () {
+        document.getElementById("input-alert-simple").style.display = "none";
+        document.getElementById("input-alert-1").style.display = "block";
+        document.getElementById("input-alert-2").style.display = "block";
+        document.getElementById("input-volume-alert").style.display = "none";
+        document.querySelector("input[name='input-alert-price']").value = "";
+        document.getElementById("alert-desc").value = "";
+        alertTypeChoice = "double";
     });
 
-    $("#radio-volume").change(function () {
-        $('#input-alert-simple').css('display', 'none');
-        $('#input-alert-1').css('display', 'none');
-        $('#input-alert-2').css('display', 'none');
-        $('#input-volume-alert').css('display', 'block');
-        $("#formu input[name='input-alert-price']").val("");
-        $('#alert-desc').val("");
-        alertTypeChoice = 'volume';
+    document.getElementById("radio-volume").addEventListener("change", function () {
+        document.getElementById("input-alert-simple").style.display = "none";
+        document.getElementById("input-alert-1").style.display = "none";
+        document.getElementById("input-alert-2").style.display = "none";
+        document.getElementById("input-volume-alert").style.display = "block";
+        document.querySelector("input[name='input-alert-price']").value = "";
+        document.getElementById("alert-desc").value = "";
+        alertTypeChoice = "volume";
     });
 }

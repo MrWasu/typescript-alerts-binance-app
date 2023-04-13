@@ -12,7 +12,7 @@ async function getPriceAndVolume() {
             fetch(urlEthPrice),
             fetch(urlBtcVolume),
             fetch(urlEthVolume)
-        ]); 
+        ]);
 
         if (!btcPriceResponse.ok || !ethPriceResponse.ok || !btcVolumeResponse.ok || !ethVolumeResponse.ok) {
             throw new Error('Error getting data from Binance');
@@ -24,22 +24,31 @@ async function getPriceAndVolume() {
         ethVolume = await ethVolumeResponse.json();
 
         btcPrice = parseFloat(btcPrice.lastPrice),
-        ethPrice = parseFloat(ethPrice.lastPrice),
-        btcVolume = Math.floor(btcVolume[0][5]),
-        ethVolume = Math.floor(ethVolume[0][5])
+            ethPrice = parseFloat(ethPrice.lastPrice),
+            btcVolume = Math.floor(btcVolume[0][5]),
+            ethVolume = Math.floor(ethVolume[0][5])
 
-        $('.bar').css('display', 'block');
+        const bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => {
+            bar.style.display = 'block';
+        });
 
     } catch (error) {
         console.error(error);
         logs('getPriceError');
-        $('.bar').css('display', 'none');
+
+        const bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => {
+            bar.style.display = 'none';
+        });
+
     }
 
-    $('#btc-price').html(addDecimal(btcPrice, 1));
-    $('#eth-price').html(addDecimal(ethPrice, 2));
-    $('#btc-volume').html('<span class="h-vol"> Volumen M1: </span>' + btcVolume);
-    $('#eth-volume').html('<span class="h-vol"> Volumen M1: &nbsp  </span>' + ethVolume);
+    document.getElementById('btc-price').innerHTML = addDecimal(btcPrice, 1);
+    document.getElementById('eth-price').innerHTML = addDecimal(ethPrice, 2);
+    document.getElementById('btc-volume').innerHTML = '<span class="h-vol"> Volumen M1: </span>' + btcVolume;
+    document.getElementById('eth-volume').innerHTML = '<span class="h-vol"> Volumen M1: &nbsp  </span>' + ethVolume;
+    
 
     setTimeout('getPriceAndVolume()', 1000);
 }

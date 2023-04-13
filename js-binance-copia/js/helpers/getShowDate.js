@@ -15,7 +15,7 @@ function showDate() {
     hourSimple = `${twoDigitsHour(actualTime.getHours())}:${twoDigitsHour(actualTime.getMinutes())}:${twoDigitsHour(actualTime.getSeconds())}`;
     dateSimple = `${actualTime.getDate()} / ${actualTime.getMonth() + 1}`;
     
-    $('#hour-div').html(`<p> ${hourSimple} </p>`)
+    document.getElementById('hour-div').innerHTML = '<p>' + hourSimple + '</p>';
     
     setTimeout('showDate()', 1000);
 }

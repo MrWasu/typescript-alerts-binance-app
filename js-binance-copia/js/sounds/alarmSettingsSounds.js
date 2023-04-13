@@ -1,7 +1,8 @@
 function alarmSettingsSounds(arg) {
     // Se reproduce un sonido de alerta según el tipo de alerta
-    let song1 = $('#sonido-1').get(0);
-    let song2 = $('#sonido-2').get(0);
+    const song1 = document.getElementById('sonido-1');
+    const song2 = document.getElementById('sonido-2');
+    
 
     if (arg == 'p' && mute == false) {
         song1.play();

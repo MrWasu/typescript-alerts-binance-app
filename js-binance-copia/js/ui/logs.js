@@ -17,14 +17,18 @@ function logs(arg1, arg2, arg3) {
     }
     else if (arg1 == 'alert-deleted') logContent.push(`<li class="log-deleted">- ${hourAndDate} :: Alerta eliminada </li>`);
 
-    $('#logs-content').html(logContent);
 
-    $("#reset-log").on("click", function () {
+    let logContentString = logContent.join(' '); // al pasarlo desde jquery reproduce las , del arreglo
+    document.getElementById('logs-content').innerHTML = logContentString;
+
+    document.getElementById('reset-log').addEventListener('click', function () {
         logContent = [];
-        $('#logs-content').html(logContent);
+        document.getElementById('logs-content').innerHTML = logContent;
     });
 
+
     // Barra de scroll para el log que hace que se quede siempre en la parte inferior
-    var container = $('#logs-content');
-    container.scrollTop(container[0].scrollHeight - container.height()); 
+    var container = document.getElementById('logs-content');
+    container.scrollTop = container.scrollHeight - container.clientHeight;
+
 }
