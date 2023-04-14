@@ -1,10 +1,10 @@
 import { Alert } from "../data";
 
-export function saveLocalStorage() { 
+export function saveLocalStorage(): void { 
 
     // Se encarga de almacenar en el local storage todos los arreglos que contienen las alertas
 
-    const arrTypes = ['BtcHigher', 'BtcLower', 'BtcVolume', 'EthHigher', 'EthLower', 'EthVolume'];
+    const arrTypes: string[] = ['BtcHigher', 'BtcLower', 'BtcVolume', 'EthHigher', 'EthLower', 'EthVolume'];
 
     arrTypes.forEach(type => {
         localStorage.setItem(`arr${type}Alerts`, JSON.stringify(eval(`arr${type}Alerts`), (key, value) => { 

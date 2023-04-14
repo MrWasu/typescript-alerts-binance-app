@@ -1,14 +1,17 @@
-import { Alert, arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, btcPrice } from "../data";
-import { logs } from "../ui";
+import { Alert, arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts, btcPrice, ethPrice } from "../data";
+import { showAlertOnConsole } from "../helpers";
+import { logs, showAlertsLi } from "../ui";
 
-export function setAlertsForArrays(cryptoChoice, alertType) :void {
+export function setAlertsForArrays(cryptoChoice:string, alertType:string): void {
     // Se almacenan las alarmas en los arreglos.
 
-    const inputAlertSimple = parseFloat(document.getElementById('input-alert-simple').value);
-    const inputAlertOne = parseFloat(document.getElementById('input-alert-1').value);
-    const inputAlertTwo = parseFloat(document.getElementById('input-alert-2').value);
-    const inputAlertVolume = parseInt(document.getElementById('input-volume-alert').value);
-    const inputDesc = document.getElementById('alert-desc').value;
+    //*const inputAlertSimple = parseFloat(document.getElementById('input-alert-simple').value);
+    const inputAlertSimple = parseFloat((<HTMLInputElement>document.getElementById('input-alert-simple'))?.value); // apuntes
+    const inputAlertOne    = parseFloat((<HTMLInputElement>document.getElementById('input-alert-1'))?.value);
+    const inputAlertTwo    = parseFloat((<HTMLInputElement>document.getElementById('input-alert-2'))?.value);
+    const inputAlertVolume = parseInt((<HTMLInputElement>document.getElementById('input-volume-alert'))?.value);
+    const inputDesc        = (<HTMLInputElement>document.getElementById('alert-desc'))?.value;
+
 
 
     // Si el valor del input es superior se añade al arreglo de alarmas por encima del precio, si es inferior al arreglo de alarmas inferiores, 
@@ -63,6 +66,6 @@ export function setAlertsForArrays(cryptoChoice, alertType) :void {
     showAlertOnConsole();
 
     // mandamos al localStorage el contador de alarmas creadas, para que al reiniciar la página las alarmas y sus id no se sustituyan, y asi funcionen los btn-remove
-    const AlertCounter = Alert.counter;
+    const AlertCounter: any = Alert.counter;
     localStorage.setItem('AlertCounter', AlertCounter);
 }

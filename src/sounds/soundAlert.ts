@@ -1,7 +1,7 @@
 import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts } from "../data";
 import { alarmSettingsSounds } from "./alarmSettingsSounds";
 
-export function soundAlert() {
+export function soundAlert():void {
     // Se revisan los status de cada alarma y si es true se manda a reproducir el sonido
 
     for (let element of arrBtcHigherAlerts) {

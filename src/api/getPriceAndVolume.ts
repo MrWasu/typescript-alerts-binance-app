@@ -1,4 +1,5 @@
 import { btcPrice, btcVolume, ethPrice, ethVolume } from "../data";
+import { addDecimal } from "../helpers";
 import { logs } from "../ui";
 
 export async function getPriceAndVolume() {
@@ -32,8 +33,8 @@ export async function getPriceAndVolume() {
             ethVolume = Math.floor(ethVolume[0][5])
 
         const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => {
-            bar.style.display = 'block';
+        bars.forEach((bar: Element) => {
+            (bar as HTMLElement).style.display = 'block'; //apuntes
         });
 
     } catch (error) {
@@ -41,17 +42,32 @@ export async function getPriceAndVolume() {
         logs('getPriceError');
 
         const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => {
-            bar.style.display = 'none';
+        bars.forEach((bar: Element) => {
+            (bar as HTMLElement).style.display = 'none'; //apuntes
         });
 
     }
 
-    document.getElementById('btc-price').innerHTML = addDecimal(btcPrice, 1);
-    document.getElementById('eth-price').innerHTML = addDecimal(ethPrice, 2);
-    document.getElementById('btc-volume').innerHTML = '<span class="h-vol"> Volumen M1: </span>' + btcVolume;
-    document.getElementById('eth-volume').innerHTML = '<span class="h-vol"> Volumen M1: &nbsp  </span>' + ethVolume;
+
+    const btcPriceElement = document.getElementById('btc-price');
+    if (btcPriceElement) {
+        btcPriceElement.innerHTML = addDecimal(btcPrice, 1);
+    }
     
+    const ethPriceElement = document.getElementById('eth-price');
+    if (ethPriceElement) {
+        ethPriceElement.innerHTML = addDecimal(ethPrice, 2);
+    }
+    
+    const btcVolumeElement = document.getElementById('btc-volume');
+    if (btcVolumeElement) {
+        btcVolumeElement.innerHTML = '<span class="h-vol"> Volumen M1: </span>' + btcVolume;
+    }
+    
+    const ethVolumeElement = document.getElementById('eth-volume');
+    if (ethVolumeElement) {
+        ethVolumeElement.innerHTML = '<span class="h-vol"> Volumen M1: &nbsp  </span>' + ethVolume;
+    }
 
     setTimeout('getPriceAndVolume()', 1000);
 }

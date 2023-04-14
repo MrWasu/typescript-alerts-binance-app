@@ -2,13 +2,13 @@ import { counterForStorage } from "./Variables";
 
 export class Alert { //! revisar private
 
-    private static counter: number = counterForStorage; // apuntes
-    private _id: number;
-    private _price: number;
-    private _currency: string;
-    private _description: string;
-    private _type: string;
-    private _status: boolean;
+    public static counter: number = counterForStorage; // apuntes
+    public _id: number;
+    public _price: number;
+    public _currency: string;
+    public _description: string;
+    public _type: string;
+    public _status: boolean;
     
     constructor(price: number, currency: string, description: string, type: string) {
     
