@@ -1,11 +1,17 @@
 import { counterForStorage } from "./Variables";
 
-export class Alert {
+export class Alert { //! revisar private
+
+    private static counter: number = counterForStorage; // apuntes
+    private _id: number;
+    private _price: number;
+    private _currency: string;
+    private _description: string;
+    private _type: string;
+    private _status: boolean;
     
-    static counter = counterForStorage;
+    constructor(price: number, currency: string, description: string, type: string) {
     
-    constructor(price, currency, description, type) {
-        
         this._id = ++Alert.counter;
         this._price = price;
         this._currency = currency;
@@ -14,50 +20,55 @@ export class Alert {
         this._status = false;
     }
     
-    get id() {
+    get id(): number {
         return this._id;
     }
     
-    get price() {
+    get price(): number {
         return this._price;
     }
-    set price(price) {
+    
+    set price(price: number) {
         this._price = price;
     }
-
-    get currency() {
+    
+    get currency(): string {
         return this._currency;
     }
-    set currency(currency) {
+    
+    set currency(currency: string) {
         this._currency = currency;
     }
     
-    get description() {
+    get description(): string {
         return this._description;
     }
-    set description(description) {
+    
+    set description(description: string) {
         this._description = description;
     }
-
-    get type() {
+    
+    get type(): string {
         return this._type;
     }
-    set type(type) {
+    
+    set type(type: string) {
         this._type = type;
     }
-
-    get status() {
+    
+    get status(): boolean {
         return this._status;
     }
-    set status(status) {
+    
+    set status(status: boolean) {
         this._status = status;
     }
     
-    toString() {
+    toString(): string {
         return `---- Nº: ${this._id} / D: ${this._description} / CUR: ${this._currency} / P: ${this._price} / T: ${this._type} / S: ${this._status}`;
     }
     
-    toJSON() { //apuntes
+    toJSON(): any { //apuntes
         return {
             id: this._id,
             price: this._price,
@@ -67,4 +78,5 @@ export class Alert {
             status: this._status,
         };
     }
+    
 }
