@@ -1,5 +1,5 @@
 let btcPrice = 0;
-let EthPrice = 0;
+let ethPrice = 0;
 let btcVolume = 0;
 let ethVolume = 0;
 let cryptoRadioChoice = 'bitcoin';
@@ -33,7 +33,7 @@ let dateSimple;
 
 export {
     btcPrice,
-    EthPrice,
+    ethPrice,
     btcVolume,
     ethVolume,
     cryptoRadioChoice,

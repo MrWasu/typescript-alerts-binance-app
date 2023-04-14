@@ -1,3 +1,5 @@
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts, btcPrice } from "../data";
+
 export function showAlertOnConsole() {
     console.log('-------------------------------------------------------');
     console.log('BTC price: ' + btcPrice);

@@ -1,4 +1,7 @@
-export function setAlertsForArrays(cryptoChoice, alertType) {
+import { Alert, arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, btcPrice } from "../data";
+import { logs } from "../ui";
+
+export function setAlertsForArrays(cryptoChoice, alertType) :void {
     // Se almacenan las alarmas en los arreglos.
 
     const inputAlertSimple = parseFloat(document.getElementById('input-alert-simple').value);

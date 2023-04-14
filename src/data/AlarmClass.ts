@@ -1,3 +1,5 @@
+import { counterForStorage } from "./Variables";
+
 export class Alert {
     
     static counter = counterForStorage;

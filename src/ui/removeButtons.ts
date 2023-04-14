@@ -1,3 +1,7 @@
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts } from "../data";
+import { saveLocalStorage } from "../helpers";
+import { logs } from "./logs";
+
 export function removeButtons() {
     // Botones de borrar para cada alarma 
 

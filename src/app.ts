@@ -1,4 +1,10 @@
 // hay un error que hacer que se siga almacenando el contador de alert counter con su valor aunque no haya alarmas, habria que hacer que si los arreglos estan vacios, mande 0 como counterforStorage
+import { alertFunctionVolume, alertFunctionPrice, setAlertsForArrays } from "./alerts/index"; // aputnes archivo de barril ts
+import { checkdata, getPriceAndVolume } from "./api";
+import { alertTypeChoice, counterForStorage, cryptoRadioChoice, mute } from "./data/Variables";
+import { showDate } from "./helpers";
+import { logs, modifiedAlertCamps, showAlertsLi } from "./ui";
+
 
 
 
@@ -6,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
  
     showDate(); // manda crear la hora y mostrarla
+    
+    
     getPriceAndVolume(); // recoge los datos desde binance
     modifiedAlertCamps(); // configura los inputs según las opciones a elegir
     logs('start'); // imprime el texto de inicio en el log

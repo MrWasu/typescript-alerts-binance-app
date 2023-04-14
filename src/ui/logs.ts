@@ -1,3 +1,5 @@
+import { dateSimple, hourSimple, logContent, logIdDontRepeat } from "../data";
+
 export function logs(arg1, arg2, arg3) {
     // Añade registros al campo de log que emula una consola
 

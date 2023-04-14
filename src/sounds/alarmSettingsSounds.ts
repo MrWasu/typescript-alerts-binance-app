@@ -1,3 +1,5 @@
+import { mute } from "../data";
+
 export function alarmSettingsSounds(arg) {
     // Se reproduce un sonido de alerta según el tipo de alerta
     const song1 = document.getElementById('sonido-1');

@@ -1,3 +1,5 @@
+import { alertTypeChoice, btcPrice, cryptoRadioChoice, ethPrice } from "../data";
+
 export function modifiedAlertCamps() {
     // Se modifican los inputs y los valores según la eleccion en los radios
 

@@ -1,4 +1,8 @@
-export function alertFunctionVolume() {
+import { arrBtcVolumeAlerts, arrEthVolumeAlerts, btcVolume, ethVolume } from "../data";
+import { soundAlert } from "../sounds";
+import { logs, volumeAlertBtnReset } from "../ui";
+
+export function alertFunctionVolume(): void {
     // Se revisan las alarmas comparandolas con el volumen actual, si hay alarma, se le cambia la propiedad status a la alarma y se manda a imprimir en el log
 
     for (let element of arrBtcVolumeAlerts) {
@@ -16,8 +20,6 @@ export function alertFunctionVolume() {
             logs('alert-match', element, 'volumen');
         }
     }
-
-    
 
     soundAlert();
 }

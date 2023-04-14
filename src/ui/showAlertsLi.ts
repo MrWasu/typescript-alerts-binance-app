@@ -1,3 +1,6 @@
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts } from "../data";
+import { removeButtons } from "./removeButtons";
+
 export function showAlertsLi() {
     // Muestra todas alertas en los paneles junto con el boton de borrar
 

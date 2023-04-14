@@ -1,4 +1,8 @@
-export function alertFunctionPrice() {
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrEthHigherAlerts, arrEthLowerAlerts, btcPrice, ethPrice } from "../data";
+import { soundAlert } from "../sounds";
+import { logs } from "../ui";
+
+export function alertFunctionPrice() :void {
     // Se revisan las alarmas comparandolas con el precio actual, si hay alarma, se le cambia la propiedad status a la alarma y se manda a imprimir en el log
 
     for (let element of arrBtcHigherAlerts) {

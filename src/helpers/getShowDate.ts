@@ -1,5 +1,6 @@
 export function showDate() {
-    actualTime = new Date();
+
+    let actualTime = new Date();
     
     const twoDigitsHour = (hour) => {
         if (hour < 10)
@@ -12,8 +13,8 @@ export function showDate() {
         return days[actualTime.getDay()];
     } //Comparamos el valor de una variable para segun la casilla del arreglo retornar un valor.
     
-    hourSimple = `${twoDigitsHour(actualTime.getHours())}:${twoDigitsHour(actualTime.getMinutes())}:${twoDigitsHour(actualTime.getSeconds())}`;
-    dateSimple = `${actualTime.getDate()} / ${actualTime.getMonth() + 1}`;
+    let hourSimple = `${twoDigitsHour(actualTime.getHours())}:${twoDigitsHour(actualTime.getMinutes())}:${twoDigitsHour(actualTime.getSeconds())}`;
+    let dateSimple = `${actualTime.getDate()} / ${actualTime.getMonth() + 1}`;
     
     document.getElementById('hour-div').innerHTML = '<p>' + hourSimple + '</p>';
     

@@ -1,3 +1,6 @@
+import { btcPrice, btcVolume, ethPrice, ethVolume } from "../data";
+import { logs } from "../ui";
+
 export async function getPriceAndVolume() {
 
     // APIs de binance, se configuran editando la url
