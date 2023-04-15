@@ -1,6 +1,6 @@
-import { counterForStorage } from "./Variables";
+import { counterForStorage } from "./Store";
 
-export class Alert { //! revisar private
+export class Alert { 
 
     public static counter: number = counterForStorage; // apuntes
     public _id: number;
@@ -21,7 +21,7 @@ export class Alert { //! revisar private
     }
     
     get id(): number {
-        return this._id;
+        return this._id; 
     }
     
     get price(): number {

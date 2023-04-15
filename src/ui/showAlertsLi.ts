@@ -13,8 +13,8 @@ export function showAlertsLi():void {
     // El boton se pasa junto con la id de la alarma que hace que posteriormente btnRemove() pase a borrar a alarma por el id del boton y la alarma
     const buildButton = (id:number) => `<button id="${id}" type="button" class="btn btn-danger btn-remove"> <span aria-hidden="true">&times;</span> </button>`;
 
-    const arraysBtcList=  [...arrBtcHigherAlerts, ...arrBtcLowerAlerts, ...arrBtcVolumeAlerts]; // apuntes
-    const arraysEthList = [...arrEthHigherAlerts, ...arrEthLowerAlerts, ...arrEthVolumeAlerts];
+    const arraysBtcList =  [...arrBtcHigherAlerts, ...arrBtcLowerAlerts, ...arrBtcVolumeAlerts]; // apuntes
+    const arraysEthList =  [...arrEthHigherAlerts, ...arrEthLowerAlerts, ...arrEthVolumeAlerts];
 
     for (let element of arraysBtcList) {
         let status = element.status ? classAlert : '';

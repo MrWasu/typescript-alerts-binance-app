@@ -1,4 +1,4 @@
-import { alertTypeChoice, btcPrice, cryptoRadioChoice, ethPrice } from "../data";
+import { btcPrice, cryptoRadioChoice, ethPrice, setAlertTypeChoice, setCryptoRadioChoice } from "../data";
 
 export function modifiedAlertCamps() {
     // Se modifican los inputs y los valores según la eleccion en los radios
@@ -8,7 +8,8 @@ export function modifiedAlertCamps() {
     });
 
     document.getElementById("btc-radio")?.addEventListener("change", function () {
-        cryptoRadioChoice = (this as HTMLInputElement).value;
+        const _cryptoRadioChoice = (this as HTMLInputElement).value;
+        setCryptoRadioChoice(_cryptoRadioChoice);
 
         document.getElementById("input-alert-simple")?.addEventListener("focus", function () {
             (this as HTMLInputElement).value = String(btcPrice); //apuntes
@@ -16,7 +17,8 @@ export function modifiedAlertCamps() {
     });
 
     document.getElementById("eth-radio")?.addEventListener("change", function () {
-        cryptoRadioChoice = (this as HTMLInputElement).value;
+        const _cryptoRadioChoice = (this as HTMLInputElement).value;
+        setCryptoRadioChoice(_cryptoRadioChoice);
 
         document.getElementById("input-alert-simple")?.addEventListener("focus", function () {
             (this as HTMLInputElement).value = String(ethPrice);
@@ -30,7 +32,9 @@ export function modifiedAlertCamps() {
         document.getElementById("input-volume-alert")!.style.display = "none";
         (document.querySelector("input[name='input-alert-price']") as HTMLInputElement).value = "";
         (document.getElementById("alert-desc") as HTMLInputElement).value = "";
-        alertTypeChoice = "simple";
+        
+        const _alertTypeChoice:string = "simple";
+        setAlertTypeChoice(_alertTypeChoice)
     });
 
     document.getElementById("radio-doble")?.addEventListener("change", function () {
@@ -40,7 +44,9 @@ export function modifiedAlertCamps() {
         document.getElementById("input-volume-alert")!.style.display = "none";
         (document.querySelector("input[name='input-alert-price']") as HTMLInputElement).value = "";
         (document.getElementById("alert-desc") as HTMLInputElement).value = "";
-        alertTypeChoice = "double";
+        
+        const _alertTypeChoice:string = "double";
+        setAlertTypeChoice(_alertTypeChoice)
     });
 
     document.getElementById("radio-volume")?.addEventListener("change", function () {
@@ -50,6 +56,8 @@ export function modifiedAlertCamps() {
         document.getElementById("input-volume-alert")!.style.display = "block";
         (document.querySelector("input[name='input-alert-price']") as HTMLInputElement).value = "";
         (document.getElementById("alert-desc") as HTMLInputElement).value = "";
-        alertTypeChoice = "volume";
+       
+        const _alertTypeChoice:string = "volume";
+        setAlertTypeChoice(_alertTypeChoice)
     });
 }

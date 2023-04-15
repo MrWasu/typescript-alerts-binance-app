@@ -1,2 +1,2 @@
 export * from './AlarmClass'
-export * from './Variables'
+export * from './Store'

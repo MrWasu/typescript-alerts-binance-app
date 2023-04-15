@@ -1,3 +1,5 @@
+import { setDateSimple, setHourSimple } from "../data";
+
 export function showDate() {
 
     let actualTime: Date = new Date();
@@ -13,18 +15,18 @@ export function showDate() {
         return days[actualTime.getDay()];
     } //Comparamos el valor de una variable para segun la casilla del arreglo retornar un valor.
 
-    let hourSimple: string = `${twoDigitsHour(actualTime.getHours())}:${twoDigitsHour(actualTime.getMinutes())}:${twoDigitsHour(actualTime.getSeconds())}`;
-    let dateSimple: string = `${actualTime.getDate()} / ${actualTime.getMonth() + 1}`;
+    let _hourSimple: string = `${twoDigitsHour(actualTime.getHours())}:${twoDigitsHour(actualTime.getMinutes())}:${twoDigitsHour(actualTime.getSeconds())}`;
+    let _dateSimple: string = `${actualTime.getDate()} / ${actualTime.getMonth() + 1}`;
 
     //document.getElementById('hour-div').innerHTML = '<p>' + hourSimple + '</p>';
 
     const hourDiv = document.getElementById('hour-div');
     if (hourDiv) {
-        if (hourSimple !== null) {
-            hourDiv.innerHTML = `<p>${hourSimple}</p>`;
+        if (_hourSimple !== null) {
+            hourDiv.innerHTML = `<p>${_hourSimple}</p>`;
         }
     }
 
-    
-    setTimeout('showDate()', 1000);
+    setHourSimple(_hourSimple)
+    setDateSimple(_dateSimple)
 }

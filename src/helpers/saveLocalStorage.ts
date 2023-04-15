@@ -1,17 +1,13 @@
-import { Alert } from "../data";
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts } from "../data";
 
-export function saveLocalStorage(): void { 
+export function saveLocalStorage(): void {
 
     // Se encarga de almacenar en el local storage todos los arreglos que contienen las alertas
 
-    const arrTypes: string[] = ['BtcHigher', 'BtcLower', 'BtcVolume', 'EthHigher', 'EthLower', 'EthVolume'];
-
-    arrTypes.forEach(type => {
-        localStorage.setItem(`arr${type}Alerts`, JSON.stringify(eval(`arr${type}Alerts`), (key, value) => { 
-            if (value instanceof Alert) {
-                return value.toJSON();
-            }
-            return value;
-        }));
-    });
+    localStorage.setItem('arrBtcHigherAlerts', JSON.stringify(arrBtcHigherAlerts));
+    localStorage.setItem('arrBtcLowerAlerts', JSON.stringify(arrBtcLowerAlerts));
+    localStorage.setItem('arrBtcVolumeAlerts', JSON.stringify(arrBtcVolumeAlerts));
+    localStorage.setItem('arrEthHigherAlerts', JSON.stringify(arrEthHigherAlerts));
+    localStorage.setItem('arrEthLowerAlerts', JSON.stringify(arrEthLowerAlerts));
+    localStorage.setItem('arrEthVolumeAlerts', JSON.stringify(arrEthVolumeAlerts));
 }

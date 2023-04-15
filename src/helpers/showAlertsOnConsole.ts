@@ -1,8 +1,7 @@
-import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts, btcPrice } from "../data";
+import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts } from "../data";
 
 export function showAlertOnConsole() {
     console.log('-------------------------------------------------------');
-    console.log('BTC price: ' + btcPrice);
     console.log('arreglo btc altas:' + arrBtcHigherAlerts);
     console.log('arreglo btc bajas: ' + arrBtcLowerAlerts);
     console.log('arreglo btc  volumen: ' + arrBtcVolumeAlerts);

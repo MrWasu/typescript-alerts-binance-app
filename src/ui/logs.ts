@@ -1,4 +1,4 @@
-import { dateSimple, hourSimple, logContent, logIdDontRepeat } from "../data";
+import { dateSimple, hourSimple, logContent, logIdDontRepeat, setLogContent } from "../data";
 
 export function logs(arg1?: any, arg2?: any, arg3?: any): void {
     // Añade registros al campo de log que emula una consola
@@ -24,7 +24,9 @@ export function logs(arg1?: any, arg2?: any, arg3?: any): void {
     document.getElementById('logs-content')!.innerHTML = logContentString;
 
     document.getElementById('reset-log')!.addEventListener('click', function () {
-        logContent = [];
+        const _logContent:any = [];
+        setLogContent(_logContent);
+        
         document.getElementById('logs-content')!.innerHTML = logContent;
     });
 
