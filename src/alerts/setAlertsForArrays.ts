@@ -6,7 +6,7 @@ export function setAlertsForArrays(cryptoChoice: string, alertType: string): voi
     // Se almacenan las alarmas en los arreglos.
 
     //*const inputAlertSimple = parseFloat(document.getElementById('input-alert-simple').value);
-    const inputAlertSimple = parseFloat((<HTMLInputElement>document.getElementById('input-alert-simple'))?.value); // apuntes
+    const inputAlertSimple = parseFloat((<HTMLInputElement>document.getElementById('input-alert-simple'))?.value);
     const inputAlertOne = parseFloat((<HTMLInputElement>document.getElementById('input-alert-1'))?.value);
     const inputAlertTwo = parseFloat((<HTMLInputElement>document.getElementById('input-alert-2'))?.value);
     const inputAlertVolume = parseInt((<HTMLInputElement>document.getElementById('input-volume-alert'))?.value);
@@ -21,7 +21,7 @@ export function setAlertsForArrays(cryptoChoice: string, alertType: string): voi
         status: boolean;
     }
 
-    let _arrBtcHigherAlerts: Alarm[] = arrBtcHigherAlerts; // apuntes
+    let _arrBtcHigherAlerts: Alarm[] = arrBtcHigherAlerts;
     let _arrBtcLowerAlerts: Alarm[] = arrBtcLowerAlerts;
     let _arrBtcVolumeAlerts: Alarm[] = arrBtcVolumeAlerts;
     let _arrEthHigherAlerts: Alarm[] = arrEthHigherAlerts;

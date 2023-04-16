@@ -2,7 +2,7 @@ import { counterForStorage } from "./Store";
 
 export class Alert { 
 
-    public static counter: number = counterForStorage; // apuntes
+    public static counter: number = counterForStorage; 
     public _id: number;
     public _price: number;
     public _currency: string;

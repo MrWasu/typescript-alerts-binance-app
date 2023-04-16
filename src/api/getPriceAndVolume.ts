@@ -35,14 +35,14 @@ export async function getPriceAndVolume() {
 
         const bars = document.querySelectorAll('.bar');
         bars.forEach((bar: Element) => {
-            (bar as HTMLElement).style.display = 'block'; //apuntes
+            (bar as HTMLElement).style.display = 'block'; 
         });
         
         
-        setBtcPrice(_btcPrice)
-        setEthPrice(_ethPrice)
-        setBtcVolume(_btcVolume)
-        setEthVolume(_ethVolume)
+        setBtcPrice(_btcPrice);
+        setEthPrice(_ethPrice);
+        setBtcVolume(_btcVolume);
+        setEthVolume(_ethVolume);
 
 
     } catch (error) {
@@ -51,7 +51,7 @@ export async function getPriceAndVolume() {
 
         const bars = document.querySelectorAll('.bar');
         bars.forEach((bar: Element) => {
-            (bar as HTMLElement).style.display = 'none'; //apuntes
+            (bar as HTMLElement).style.display = 'none';
         });
 
     }

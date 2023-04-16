@@ -1,6 +1,6 @@
 import { saveLocalStorage } from "../helpers";
 
-let btcPrice: number = 0; //! revisar const y let
+let btcPrice: number = 0; 
 let ethPrice: number = 0;
 let btcVolume: number = 0;
 let ethVolume: number = 0;
@@ -8,7 +8,6 @@ let cryptoRadioChoice: string = 'bitcoin';
 let alertTypeChoice: string = 'double';
 let mute: boolean = false;
 
-// Alarmas Predefinidas
 
 interface Alarm {
   id: number;
@@ -19,6 +18,7 @@ interface Alarm {
   status: boolean;
 }
 
+// Alarmas Predefinidas
 const alarmDemo1: Alarm = { "id": 1, "price": 50000, "currency": "bitcoin", "description": "Alarma de ejemplo 1", "type": "Superior", "status": false }
 const alarmDemo2: Alarm = { "id": 2, "price": 2000, "currency": "bitcoin", "description": "Alarma de ejemplo 2", "type": "Inferior", "status": false }
 const alarmDemo3: Alarm = { "id": 3, "price": 30000, "currency": "bitcoin", "description": "Alarma Volumen de ejemplo 3", "type": "Volumen", "status": false }
@@ -29,8 +29,6 @@ const alarmDemo7: Alarm = { "id": 7, "price": 80000, "currency": "ethereum", "de
 
 
 // Arreglos
-//*const arrBtcHigherAlerts = JSON.parse(localStorage.getItem('arrBtcHigherAlerts')) || [alarmDemo1]
-
 let storageIsVoid = true
 const storedData = localStorage.getItem('arrBtcHigherAlerts');
 const storedData2 = localStorage.getItem('arrBtcLowerAlerts');
@@ -69,13 +67,6 @@ if (!storedData6 && storageIsVoid) arrEthVolumeAlerts.push(alarmDemo6, alarmDemo
 
 
 let counterForStorage: number = JSON.parse(localStorage.getItem('AlertCounter') ?? '7') || 7;
-
-/* En este ejemplo, se utiliza el operador de coalescencia nula (??) para proporcionar un valor predeterminado de una cadena vacía ('[]')
-en caso de que el valor recuperado del almacenamiento local sea null. Luego, se utiliza JSON.parse() para analizar la cadena de texto y obtener un arreglo válido.
-Si el resultado de JSON.parse() sigue siendo null, se utiliza un valor predeterminado en su lugar
-(por ejemplo, [alarmDemo1], [alarmDemo2], etc., o 7 en el caso de counterForStorage). 
-Esto asegura que estés pasando una cadena de texto válida a JSON.parse() y evita el error de tipo. */
-
 
 let logIdDontRepeat: number[] = [];
 let logContent: any = [];

@@ -20,7 +20,7 @@ export function logs(arg1?: any, arg2?: any, arg3?: any): void {
     else if (arg1 === 'alert-deleted') logContent.push(`<li class="log-deleted">- ${hourAndDate} :: Alerta eliminada </li>`);
 
 
-    let logContentString = logContent.join(' '); // al pasarlo desde jquery reproduce las , del arreglo
+    let logContentString = logContent.join(' '); 
     document.getElementById('logs-content')!.innerHTML = logContentString;
 
     document.getElementById('reset-log')!.addEventListener('click', function () {
