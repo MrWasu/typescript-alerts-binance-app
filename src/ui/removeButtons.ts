@@ -1,17 +1,9 @@
 import { arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts, setArrBtcHigherAlerts, setArrBtcLowerAlerts, setArrBtcVolumeAlerts, setArrEthHigherAlerts, setArrEthLowerAlerts, setArrEthVolumeAlerts } from "../data";
+import { Alarm } from "../data/interfaces";
 import { logs } from "./logs";
 
 export function removeButtons(): void {
     // Botones de borrar para cada alarma 
-
-    interface Alarm {
-        id: number;
-        price: number;
-        currency: string;
-        description: string;
-        type: string;
-        status: boolean;
-    }
 
     let _arrBtcHigherAlerts: Alarm[] = arrBtcHigherAlerts;
     let _arrBtcLowerAlerts: Alarm[] = arrBtcLowerAlerts;

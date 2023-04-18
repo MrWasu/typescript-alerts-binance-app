@@ -1,4 +1,5 @@
 import { saveLocalStorage } from "../helpers";
+import { Alarm } from "./interfaces";
 
 let btcPrice: number = 0; 
 let ethPrice: number = 0;
@@ -8,15 +9,6 @@ let cryptoRadioChoice: string = 'bitcoin';
 let alertTypeChoice: string = 'double';
 let mute: boolean = false;
 
-
-interface Alarm {
-  id: number;
-  price: number;
-  currency: string;
-  description: string;
-  type: string;
-  status: boolean;
-}
 
 // Alarmas Predefinidas
 const alarmDemo1: Alarm = { "id": 1, "price": 50000, "currency": "bitcoin", "description": "Alarma de ejemplo 1", "type": "Superior", "status": false }
@@ -28,7 +20,7 @@ const alarmDemo6: Alarm = { "id": 6, "price": 90000, "currency": "ethereum", "de
 const alarmDemo7: Alarm = { "id": 7, "price": 80000, "currency": "ethereum", "description": "Alarma Volumen de ejemplo", "type": "Volumen", "status": false }
 
 
-// Arreglos
+// Arreglos que contienen las alarmas
 let storageIsVoid = true
 const storedData = localStorage.getItem('arrBtcHigherAlerts');
 const storedData2 = localStorage.getItem('arrBtcLowerAlerts');
@@ -73,7 +65,7 @@ let logContent: any = [];
 let hourSimple: string;
 let dateSimple: string;
 
-
+// setters de valores
 export const setBtcPrice = (price: number) => btcPrice = price;
 export const setEthPrice = (price: number) => ethPrice = price;
 export const setBtcVolume = (volume: number) => btcVolume = volume;
@@ -114,6 +106,7 @@ export const setArrEthVolumeAlerts = (arr: Alarm[]) => {
 export const setCounterForStorage = (counter: number) => counterForStorage = counter;
 
 
+// exportación de valores 
 export {
   alertTypeChoice,
   arrBtcHigherAlerts,

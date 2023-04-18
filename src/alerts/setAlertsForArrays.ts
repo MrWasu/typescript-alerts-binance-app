@@ -1,4 +1,5 @@
 import { Alert, arrBtcHigherAlerts, arrBtcLowerAlerts, arrBtcVolumeAlerts, arrEthHigherAlerts, arrEthLowerAlerts, arrEthVolumeAlerts, btcPrice, ethPrice, setArrBtcHigherAlerts, setArrBtcLowerAlerts, setArrBtcVolumeAlerts, setArrEthHigherAlerts, setArrEthLowerAlerts, setArrEthVolumeAlerts } from "../data";
+import { Alarm } from "../data/interfaces";
 import { showAlertOnConsole } from "../helpers";
 import { logs, showAlertsLi } from "../ui";
 
@@ -11,15 +12,6 @@ export function setAlertsForArrays(cryptoChoice: string, alertType: string): voi
     const inputAlertTwo = parseFloat((<HTMLInputElement>document.getElementById('input-alert-2'))?.value);
     const inputAlertVolume = parseInt((<HTMLInputElement>document.getElementById('input-volume-alert'))?.value);
     const inputDesc = (<HTMLInputElement>document.getElementById('alert-desc'))?.value;
-
-    interface Alarm {
-        id: number;
-        price: number;
-        currency: string;
-        description: string;
-        type: string;
-        status: boolean;
-    }
 
     let _arrBtcHigherAlerts: Alarm[] = arrBtcHigherAlerts;
     let _arrBtcLowerAlerts: Alarm[] = arrBtcLowerAlerts;
