@@ -14,77 +14,32 @@ export function removeButtons(): void {
 
     const buttons = document.querySelectorAll("button.btn-remove");
     for (let i = 0; i < buttons.length; i++) {
+       
         buttons[i].addEventListener("click", function (this: HTMLElement) {
 
             let pos: number = -1
 
-            for (let element of _arrBtcHigherAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrBtcHigherAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrBtcHigherAlerts.splice(pos, 1);
-                    setArrBtcHigherAlerts(_arrBtcHigherAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-            for (let element of _arrBtcLowerAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrBtcLowerAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrBtcLowerAlerts.splice(pos, 1);
-                    setArrBtcLowerAlerts(_arrBtcLowerAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-            for (let element of _arrBtcVolumeAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrBtcVolumeAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrBtcVolumeAlerts.splice(pos, 1);
-                    setArrBtcVolumeAlerts(_arrBtcVolumeAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-            for (let element of _arrEthHigherAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrEthHigherAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrEthHigherAlerts.splice(pos, 1);
-                    setArrEthHigherAlerts(_arrEthHigherAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-            for (let element of _arrEthLowerAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrEthLowerAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrEthLowerAlerts.splice(pos, 1);
-                    setArrEthLowerAlerts(_arrEthLowerAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-            for (let element of _arrEthVolumeAlerts) {
-                if (parseInt(this.id) == element.id) {
-                    pos = _arrEthVolumeAlerts.indexOf(element);
-                }
-                if (pos != -1) {
-                    _arrEthVolumeAlerts.splice(pos, 1);
-                    setArrEthVolumeAlerts(_arrEthVolumeAlerts)
-                    pos = -1;
-                    logs('alert-deleted', element);
-                }
-            }
-        });
+            const allArrays = [_arrBtcHigherAlerts, _arrBtcLowerAlerts, _arrBtcVolumeAlerts, _arrEthHigherAlerts, _arrEthLowerAlerts, _arrEthVolumeAlerts]
 
+            for (let element of allArrays) {
+                for (let e of element) {
+                    if (parseInt(this.id) == e.id) {
+                        pos = element.indexOf(e);
+                    }
+                    if (pos != -1) {
+                        element.splice(pos, 1);
+                        pos = -1;
+                        logs('alert-deleted', e);
+                    }
+                }
+            }
+
+            setArrBtcHigherAlerts(_arrBtcHigherAlerts);
+            setArrBtcLowerAlerts(_arrBtcLowerAlerts);
+            setArrBtcVolumeAlerts(_arrBtcVolumeAlerts);
+            setArrEthHigherAlerts(_arrEthHigherAlerts);
+            setArrEthLowerAlerts(_arrEthLowerAlerts);
+            setArrEthVolumeAlerts(_arrEthVolumeAlerts);
+        });
     }
 }

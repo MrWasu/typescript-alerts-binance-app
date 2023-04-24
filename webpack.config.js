@@ -20,6 +20,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        static: './'
+        static: './',
+        devMiddleware: {
+            writeToDisk: true,
+          },
     } 
 };

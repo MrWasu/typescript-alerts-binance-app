@@ -7,10 +7,11 @@ import { logs, modifiedAlertCamps, showAlertsLi } from "./ui";
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    
     setInterval(() => getPriceAndVolume(), 1000); // recoge los datos desde binance
     showDate(); // manda crear la hora y mostrarla
     modifiedAlertCamps(); // configura los inputs según las opciones a elegir
-
+    
     
     setTimeout(function () {
         setInterval(function () {

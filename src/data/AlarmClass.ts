@@ -27,7 +27,6 @@ export class Alert {
     get price(): number {
         return this._price;
     }
-    
     set price(price: number) {
         this._price = price;
     }
@@ -35,7 +34,6 @@ export class Alert {
     get currency(): string {
         return this._currency;
     }
-    
     set currency(currency: string) {
         this._currency = currency;
     }
@@ -43,7 +41,6 @@ export class Alert {
     get description(): string {
         return this._description;
     }
-    
     set description(description: string) {
         this._description = description;
     }
@@ -51,7 +48,6 @@ export class Alert {
     get type(): string {
         return this._type;
     }
-    
     set type(type: string) {
         this._type = type;
     }
@@ -59,7 +55,6 @@ export class Alert {
     get status(): boolean {
         return this._status;
     }
-    
     set status(status: boolean) {
         this._status = status;
     }
@@ -77,6 +72,5 @@ export class Alert {
             type: this._type,
             status: this._status,
         };
-    }
-    
+    } 
 }
